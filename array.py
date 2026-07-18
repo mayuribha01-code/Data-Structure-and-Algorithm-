@@ -38,31 +38,31 @@ print("Size of arr:",len(arr))
 # Finding element in arr
 arr=[10,20,100,13,30,101,40,50]
 key=30
-Found=False
+found=False
 for i in arr:
     if i==key:
-        Found=True
-print("Element Found:", Found)
+        found=True
+print("Element Found:", found)
 
 # Finding largest element
-max=arr[0]
+Largest=arr[0]
 for i in arr:
-    if i>max:
-        max=i
-print("Largest Element:",max)
+    if i>Largest:
+        Largest=i
+print("Largest Element:",Largest)
 
 # Finding Smallest element
-min=arr[0]
+Smallest=arr[0]
 for i in arr:
-    if i<min:
-        min=i
-print("Smallest element:",min)
+    if i<Smallest:
+       Smallest=i
+print("Smallest element:",Smallest)
 
 # Sum of Elements in array
-sum=0
+total=0
 for i in arr:
-    sum+=i
-print("Sum:",sum)
+    total+=i
+print("Sum:",total)
 
 # Average of elements in array
 print("Average:", sum/len(arr))
@@ -85,8 +85,11 @@ print("Reversing by slicing:", arr[::-1])
 start=0
 end=len(arr)-1
 
-while end<start:
-    arr[start],arr[end]= arr[end]. arr[start]
+start=0
+end=len(arr)-1
+
+while start<end:
+    arr[start],arr[end]= arr[end], arr[start]
     start+=1
     end-=1
 print("Reversing by Swapping", arr)
@@ -97,11 +100,11 @@ print("Negative Slicing:", arr[5:1:-1])
 print("Slicing by other second element:",arr[::2])
 
 # Find the largest even number.
-max= arr[0]
+Largest= None
 for i in arr:
-    if (i%2==0) and (i>max):
-        max=i
-print("Largest Even no.:",max)
+    if (i%2==0) and (Largest is None or i >Largest):
+        Largest=i
+print("Largest Even no.:",Largest)
 
 # Find the smallest odd number.
 minimum = None
@@ -115,11 +118,49 @@ else:
     print("Smallest Odd Number:", minimum)
 
 # Rotate an array left by one position.
+print(arr)
+temp=arr[0]
+for i in range(0,len(arr)-1):
+    arr[i]=arr[i+1]
+arr[len(arr)-1]=temp
+print(arr)
 
 # Rotate an array right by one position.
+print(arr)
+temp=arr[len(arr)-1]
+for i in range(len(arr)-1,0,-1):
+   arr[i]=arr[i-1]
+arr[0]=temp
+print(arr)
+
 # Move all zeros to the end.
-# Count the frequency of every element.
+arr=[70,0,65,0,0,34]
+count=0
+arr2=[]
+for i in arr:
+    if i==0:
+        count+=1
+    else:
+        arr2.append(i)
+print(arr2+[0]*count)
+
 # Merge two arrays.
+arr=[1,2,3,4,5]
+arr2=[6,7,8,9]
+print(arr+arr2)
+
 # Find the difference between the largest and smallest element.
+Smallest=min(arr)
+Largest=max(arr)
+print(Largest-Smallest)
+
 # Check whether two arrays are identical.
+arr3=[1,2,3,4,5]
+found=False
+if arr==arr3:
+    found=True
+print(found)
+
 # Find the third largest element.
+
+# Count the frequency of every element.
