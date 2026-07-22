@@ -9,21 +9,40 @@
 # print('Mayuri\'s phone')
 # print("Hey!! \"Mayuri\"")
 
-# Membership Operations
+# # Membership Operations
 
-s="Python is a Computer Language."
-print("Java" in s)
-print("python" in s)
-print("Python" in s)
-print("Java" not in s)
+# s="Python is a Computer Language."
+# print("Java" in s)
+# print("python" in s)
+# print("Python" in s)
+# print("Java" not in s)
 
-# Replace
-print(s.replace("Python","Java"))
-print(s.replace('a',"A"))
-print(s.replace('a',"A",1))
-print(s.replace('a',"A",2))
+# # Replace
+# print(s.replace("Python","Java"))
+# print(s.replace('a',"A"))
+# print(s.replace('a',"A",1))
+# print(s.replace('a',"A",2))
 
-# Strip
-s="Python "
-s1= s.strip()
-print(s1=="Python")
+# # Strip
+# s="Python "
+# s1= s.strip()
+# print(s1=="Python")
+
+# #Count string 
+# s="Mayuri is learning python"
+# print("Count learn:",s.count("learn"))
+# print("Count a:",s.count('a'))
+
+# # Case modification 
+# s="Python is a language"
+# print(s.lower())
+# print(s.upper())
+# print(s.capitalize())
+# print(s.title())
+
+# s="Python iS a languAge"
+# print(s.lower())
+# print(s.upper())
+# print(s.capitalize())
+# print(s.title())
+
